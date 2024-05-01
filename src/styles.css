@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --Dark-Blue: hsl(233, 26%, 24%);
+    --Lime-Green: hsl(136, 65%, 51%);
+    --Bright-Cyan: hsl(192, 70%, 51%);
+    --Grayish-Blue: hsl(233, 8%, 62%);
+    --Light-Grayish-Blue: hsl(220, 16%, 96%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --gradient-color: linear-gradient(
+        115deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+
+    font-family: "Public Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: var(--Very-Light-Gray);
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+li:hover {
+    color: var(--Lime-Green);
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+nav {
+    width: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--White);
+}
+
+nav .navItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .navItem ul:first-child {
+    display: none;
+}
+
+nav .navItem ul:last-child.activated {
+    display: flex;
+}
+
+nav .navItem ul:last-child li {
+    opacity: 70%;
+}
+
+nav .navItem ul:last-child li:hover {
+    opacity: 100%;
+}
+
+nav .navItem ul:last-child {
+    position: absolute;
+    background: var(--Very-Light-Gray);
+    width: 300px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    top: 55px;
+    right: 10px;
+    padding: 1rem 0rem;
+    border-radius: 5px;
+    box-shadow:
+    0.2px 3.3px 2.2px rgba(0, 0, 0, 0.065),
+    0.5px 8.3px 5.6px rgba(0, 0, 0, 0.093),
+    1.1px 17px 11.5px rgba(0, 0, 0, 0.117),
+    2.2px 35px 23.7px rgba(0, 0, 0, 0.145),
+    6px 96px 65px rgba(0, 0, 0, 0.21)
+    ;
+}
+
+nav .navButton button:first-child.activated {
+    display: none;
+}
+
+nav .navButton button:last-child.activated {
+    display: inline;
+}
+
+nav .navButton button:first-child {
+    background: transparent;
+    border: none;
+}
+
+nav .navButton button:last-child {
+    display: none;
+    background: transparent;
+    border: none;
+}
+
+nav button:last-child {
+    display: none;
+}
+
+main header {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+        gap: 1rem;
+        align-items: center;
+        padding-bottom: 3rem;
+
+        h1 {
+            opacity: 90%;
+        }
+
+        p {
+            opacity: 80%;
+        }
+
+        button {
+            width: fit-content;
+            padding: .8rem 1rem;
+            border-radius: 30px;
+            border: none;
+            background: var(--gradient-color);
+            color: var(--White);
+            font-weight: 600;
+        }
+    }
+
+    .header-images {
+        width: 100vw;
+        height: 360px;
+        background-image: url(./assets/images/image-mockups.png), url(./assets/images/bg-intro-mobile.svg);
+        background-position: 0px -100px, 0px 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.why-Easybank {
+    padding: 3rem 1rem;
+    background: var(--Light-Grayish-Blue);
+
+    h1 {
+        opacity: 90%;
+        text-align: center;
+    }
+
+    p {
+        padding: 2rem 0rem;
+        text-align: center;
+        opacity: 80%;
+    }
+
+    .why-Easybank_container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        div :first-child {
+            width: 100px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+
+            p {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.articles {
+    padding: 1rem;
+
+    h1 {
+        text-align: center;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    h2:hover {
+        color: var(--Lime-Green);
+        cursor: pointer;
+    }
+
+    .articles-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .articles-flexitem {
+            display: flex;
+            flex-direction: column;
+
+            .articles-imageContainer {
+                width: 100%;
+                height: 250px;
+                border-radius: 5px 5px 0px 0px;
+
+                img {
+                    width: inherit;
+                    height: inherit;
+                    border-radius: inherit;
+                    object-fit: cover;
+                }
+            }
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+                background: var(--White);
+                border-radius: 0px 0px 5px 5px;
+                opacity: 80%;
+            }
+        }
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+footer {
+    background: var(--Dark-Blue);
+    padding: 1rem;
+    color: var(--White);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        
+        .dsflex {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 2rem;
+
+            .flexitem {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            padding-top: 1rem;
+
+            ul {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        .rights-reserved {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding-top: 1rem;
+
+            button {
+                width: fit-content;
+                padding: .8rem 1rem;
+                border-radius: 30px;
+                border: none;
+                background: var(--gradient-color);
+                color: var(--White);
+                font-weight: 600;
+            }
+
+            p {
+                opacity: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 680px) {
+    nav {
+        padding: 0px 1rem;
+        align-items: center;
+        height: 65px;
+    }
+
+    nav .navItem ul:first-child {
+        position: relative;
+        top: 8px;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    nav .navItem ul:first-child li {
+        height: 43px;
+        opacity: 70%;
+        font-weight: 600;
+    }
+
+    nav .navItem ul:first-child li:hover {
+        border-bottom: 4px solid var(--Lime-Green);
+        opacity: 100%;
+        color: black;
+    }
+
+    nav .navButton {
+        display: none;
+    }
+
+    nav button:last-child {
+        display: inline;
+        width: fit-content;
+        padding: .8rem 1rem;
+        border-radius: 30px;
+        border: none;
+        background: var(--gradient-color);
+        color: var(--White);
+        font-weight: 600;
+    }
+
+    nav button:last-child:hover {
+        opacity: 70%;
+    }
+
+    .why-Easybank {
+    
+        .why-Easybank_container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+    
+            div :first-child {
+                width: 70px;
+            }
+        }
+    }
+
+    .articles {
+
+        .articles-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    footer {
+    
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            font-size: 12px;
+    
+            .footer-nav {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+    
+                ul {
+                    display: flex;
+                    align-items: start;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 880px) {
+    nav {
+        padding: 1rem 2rem;
+    }
+
+    main header {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    
+        .header-container {
+            text-align: start;
+            align-items: start;
+            justify-content: center;
+            padding: 1rem 2rem;
+        }
+    
+        .header-images {
+            width: 100%;
+            height: 360px;
+            background-image: url(./assets/images/image-mockups.png), url(./assets/images/bg-intro-mobile.svg);
+            background-position: 0px -100px, 0px 0px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .why-Easybank {
+        padding: 1rem 2rem;
+    
+        h1 {
+            text-align: start;
+        }
+    
+        p {
+            text-align: start;
+        }
+    
+        .why-Easybank_container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: start;
+    
+            div :first-child {
+                width: 50px;
+            }
+            
+            div :nth-child(2) {
+                font-size: larger;
+            }
+    
+            div {
+                align-items: flex-start;
+            }
+        }
+    }
+
+    .why-Easybank > p {
+        width: 600px;
+    }
+
+    .articles {
+        padding: 1rem 2rem;
+    }
+
+    footer {
+    
+        .container {
+            padding: 1rem 2rem;
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    main header {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    
+        .header-container {
+            text-align: start;
+            align-items: start;
+            justify-content: center;
+        }
+    
+        .header-images {
+            width: 100%;
+            height: 360px;
+            background-image: url(./assets/images/image-mockups.png), url(./assets/images/bg-intro-mobile.svg);
+            background-position: 0px -100px, 0px 0px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .why-Easybank {
+    
+        .why-Easybank_container {
+    
+            div :first-child {
+                width: 70px;
+            }
+            
+            div :nth-child(2) {
+                font-size:x-large;
+            }
+        }
+    }
+
+    .articles {
+
+        .articles-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            font-size: 14px;
+
+            .articles-flexitem {
+                display: grid;
+                grid-auto-rows: 1fr;
+            }
+        }
+    }
+        
+    footer {
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+
+            .footer-nav {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                justify-items: center;
+
+            }
+        }
+    }
+}
